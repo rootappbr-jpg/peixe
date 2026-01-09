@@ -1,0 +1,383 @@
+body {
+	margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #000000a3;
+    height: 97vh;
+    overflow: hidden;
+}
+.body1{
+	font-family: Arial, sans-serif;
+    background: #111;
+}
+.body2{
+	font-family: Arial, sans-serif;
+    background: #111;
+}
+
+#app {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+}
+
+button {
+    width: 99%;
+    padding: 10px;
+    margin: 6px 0;
+    font-size: 16px;
+    cursor: pointer;
+    float: left; 
+}
+
+.Ipt1 {
+    font-size: 20px;
+    width: 98%;
+    color: mediumblue;
+    font-family: cursive;
+}
+
+.msg {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.msg.ok {
+    color: #4CAF50;
+}
+
+.msg.error {
+    color: #F44336;
+}
+
+.msg.level {
+    color: #FFD700;
+}
+/* Container das opções */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* O botão de opção individual */
+.options button {
+    flex: 1 1 45%;
+    min-width: 120px;
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    background: rgb(22 111 162 / 23%);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(5px);
+    text-transform: capitalize;
+    width: auto;
+    margin-left: 10px;
+}
+
+/* Efeito Hover (passar o mouse) */
+.options button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #7b61ff; /* Cor de destaque */
+    transform: scale(1.05); /* Aumenta levemente */
+    box-shadow: 0 0 15px rgba(123, 97, 255, 0.5);
+	color: black;
+}
+
+/* Efeito quando o botão está correto ou selecionado */
+.options button.selected {
+    background: #4caf50;
+    border-color: #2e7d32;
+    box-shadow: 0 0 10px #4caf50;
+}
+
+@keyframes surgirSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Começa um pouco abaixo */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Sobe para a posição original */
+    }
+}
+ .options2{   
+ width: 100px;
+ }
+.botao-moderno,.botao-moderno2{
+    /* Estrutura e Layout */
+    width: 100%;           /* Ocupa a largura total com segurança */
+    padding: ;
+    margin: 10px 0;
+    border: none;          /* Remove a borda padrão chata */
+    border-radius: 8px;    /* Bordas arredondadas são essenciais */
+    
+    /* Tipografia */
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    /* Cores e Fundo */
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    cursor: pointer;
+    
+    /* Sombra e Efeito Visual */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; /* Faz a mágica acontecer no hover */
+    
+    /* Substituindo o float por flex para melhor controle */
+    display: block;
+    box-sizing: border-box; /* Garante que o padding não quebre o 100% */
+}
+
+/* Efeito ao passar o mouse */
+.botao-moderno:hover,.botao-moderno2:hover {
+    transform: translateY(-2px); /* Levanta o botão levemente */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+/* Efeito ao clicar */
+.botao-moderno:active,.botao-moderno2:active{
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.botao-moderno2{
+	    width: 45%;
+		overflow: hidden;
+		text-align: center;
+		font-size: 11px;
+		margin: 4px;
+}
+
+
+.inputTexto,#inputTexto{
+	
+}
+#stats{width: 100%;
+    float: left;
+    overflow: hidden;}
+
+.Tx1 {
+    width: 99%;
+    float: left;
+    text-align: left;
+    color: #0c218f;
+    margin-bottom: 5px;
+    background-color: #d9ffd9;
+    padding: 5px;
+    text-shadow: 1px 1px #ffff16;
+}
+.login {
+    width: 401px;
+    height: auto;
+    overflow: hidden;
+    padding-left: 26px;
+}
+
+
+#feedback {
+    position: fixed;
+    top: 0px;
+    z-index: 9999;
+    font-size: 22px;
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding-left: 228px;
+    padding-right: 20px;
+    height: auto;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.dica,.exemplo {
+    float: left;
+    padding: 1px  8px 1px 8px;
+	width: 100%;
+}
+.exemplo {
+	background-color: #3d7ff773;
+}
+
+.dica {
+
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  display: block;
+    background-color: rgba(255, 255, 22, 0.56);
+}
+
+
+.dica.ativa {
+  max-height: 200px; /* ajuste conforme o conteúdo */
+  opacity: 1;
+}
+.game {
+    width: 100%;
+    top: 0;
+    position: fixed;
+	height:100%;
+	background-size: 78% 100%;
+	background-repeat: no-repeat;
+    padding:0px;
+    left: 230px;
+}
+
+#game {
+  transition: background-image 1s ease, opacity 1s ease;
+  opacity: 0;  /* Start with the game hidden */
+}
+
+.BOXPALAVRA {
+    height: 219px;
+    transition: color 0.5s ease, transform 0.2s ease;
+	position: sticky;
+}
+
+.Box,.Box1,.Box2 {
+
+}
+.Box {
+    padding: 70px;
+    width: 63%;
+    float: left;
+}
+
+.Box1 {
+    float: left;
+    width: 201px;
+    position: fixed;
+    left: 1px;
+    height: 97%;
+    top: 0px;
+    padding: 4px 10px 4px 10px;
+    border: solid;
+    border-color: #a1c0f5;
+    background-color: #a1bff685;
+}
+
+.Box2 {
+    display: block;
+    float: left;
+    position: fixed;
+    left: 222px;
+    bottom: 0px;
+    background-color: #252527;
+    padding: 4px 10px 4px 10px;
+    width: calc(100% - 200px);
+    height: 34px;
+}
+
+.Box3 {
+    float: left;
+    width: 201px;
+    position: fixed;
+    left: 1px;
+    height: 100%;
+    top: 0px;
+    background-color: #a1bff6;
+    padding: 4px 10px 4px 10px;
+}
+.Box4 {
+    border-style: groove;
+    padding: 4px;
+    font-size: 16px;
+    background-color: #f3f4f6;
+}
+.BoxImg {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Btn1{
+    width: auto;
+    padding: 4px;
+    height: 28px;
+    background-color: #1bdd10bf;
+    font-weight: bolder;
+    border: 0;
+}
+
+.ind {
+    width: 94%;
+    float: left;
+    font-size: 26px;
+    text-align: center;
+    padding: 23px 1px 1px 1px;
+    color: #4aa3ff;
+}
+#rewardBox {
+    display: none;           /* inicialmente escondido */
+    position: fixed;         /* fixa sobre toda a tela */
+    top: 0;
+    left: 0;
+    width: 100vw;            /* largura total da tela */
+    height: 100vh;           /* altura total da tela */
+    background-color: rgba(0, 0, 0, 0.9); /* fundo escuro semi-transparente */
+    z-index: 9999;           /* acima de todos os elementos */
+    justify-content: center; /* centraliza conteúdo horizontal */
+    align-items: center;     /* centraliza conteúdo vertical */
+    display: flex;           /* permite centralização com flex */
+    flex-direction: column;  /* botão abaixo do vídeo */
+}
+
+#rewardBox iframe {
+    width: 90vw;             /* vídeo ocupa 90% da largura da tela */
+    height: 80vh;            /* vídeo ocupa 80% da altura da tela */
+    border: none;
+    border-radius: 10px;
+}
+
+#rewardBox button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.msg {
+    font-size: 18px;
+    margin-top: 10px;
+    float: left;
+}
+
+
+
+.listaHistorico{
+    margin-top: -7px;
+    max-height: 100px;
+    overflow-y: auto;
+    height: 96px;
+    width: 100%;
+}
+.historico-container {
+    float: left;
+    width: 100%;
+    padding: 2px 3px 3px 3px;
+    color: aliceblue;
+    height: 134px;
+}
+
+.bgVideo {
+    height: 100%;
+    width: 90%;
+    position: absolute;
+    background-color: black;
+    top: 0;
+    left: 0;
+}

@@ -1,0 +1,62 @@
+.word {
+    font-size: xx-large;
+    font-weight: bold;
+    transition: color 0.5s ease, transform 0.2s ease;
+    text-align: center;
+    width: calc(95% - 150px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-shadow: -2px 5px 5px rgb(25 26 26);
+    transition: all 0.3s ease;
+}
+#word {
+  white-space: pre-line;
+}
+
+
+/* estado neutro */
+.cold {
+  font-family: 'Arial', sans-serif; /* Choose your font */
+  font-size: 3em; /* Large text */
+  color: #ffffff; /* White color for the text */
+  text-shadow:
+    1px 1px 2px rgba(0, 0, 0, 0.4), /* Light shadow on the bottom-right for depth */
+    -1px -1px 2px rgba(255, 255, 255, 0.8); /* Light highlight on the top-left for 3D effect */
+  font-weight: bold; /* Make the text bold for more impact */
+  letter-spacing: 1px; /* Slightly space the letters */
+  text-transform: uppercase; /* Capitalize the text */
+  transition: all 0.5s ease; /* Smooth transition effect */
+}
+
+.cold:hover {
+  color: #f0f8ff; /* Light blue color when hovered */
+  text-shadow:
+    1px 1px 5px rgba(0, 0, 0, 0.6), /* Darker shadow on hover */
+    -1px -1px 5px rgba(255, 255, 255, 1); /* Stronger highlight on hover */
+}
+
+
+/* acerto */
+.hot {
+    color: #3bff65;
+    transform: scale(1.15);
+}
+
+/* erro */
+@keyframes shake {
+    0%   { transform: translateX(0); }
+    25%  { transform: translateX(-6px); }
+    50%  { transform: translateX(6px); }
+    75%  { transform: translateX(-6px); }
+    100% { transform: translateX(0); }
+}
+
+.error {
+	color: red;
+    animation: shake 0.55s;
+}
+
+
+
+
+

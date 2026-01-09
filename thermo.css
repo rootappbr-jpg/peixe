@@ -1,0 +1,29 @@
+.thermo {
+    width: 4px;
+    height: 98%;
+    background: #ddd;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 9999;
+    position: fixed;
+    left: 2px;
+    top: 2px;
+}
+
+.bar {
+  width: 10px;
+  height: 10%;
+  transition: height 0.8s ease, background 0.8s ease;
+}
+
+/* estados */
+.bar.cold {
+  height: 10px;
+  background: red; /* azul */
+}
+
+.bar.hot {
+  height: 100%;
+  background: rgb(40 223 40 / 92%); /* vermelho */
+}
