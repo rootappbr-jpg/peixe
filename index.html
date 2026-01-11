@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Game</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="animacoes.css">
+	<link rel="stylesheet" href="thermo.css">
+	<link rel="stylesheet" href="aquario.css">	
+</head>
+<body id="" >
+
+
+		
+<!-- ================= LOGIN ================= -->
+<div class='login' id='login'>
+    <h2>Aprender Ingles</h2>
+
+    <input 
+        class='Ipt1' 
+        id='usernameInput' 
+        placeholder='Teste'
+        oninput="atualizarBotao()"
+    />
+
+    <button class='options2' id="btnTestar" onclick='login()'>
+        Testar
+    </button>
+
+    <button class='options2' onclick='Carregar()'>
+        Continuar
+    </button>
+</div>
+
+
+<!-- JOGO -->
+<!-- FEEDBACK -->
+<div id="feedback" class="feedback"></div>
+
+
+
+<div id="game" class="game" style="display:none;background-size: cover;">
+					 <video style="display:none;" id="bgVideo" class="bgVideo" autoplay muted loop></video>
+<div id="aquario">
+    <img id="peixe" src="img/mg31.gif">
+</div>
+
+
+	<div class="thermo"><div id="thermoBar" class="bar cold"></div></div>
+	
+	<div id="boxColor" class="Box1" style="display:block;background-color:#a1bff6">		
+
+	
+	<!-- INFO DO USUÁRIO -->
+		<h3 id="userInfo" class="Box4"></h3>
+
+		<!-- CONTROLES DE SAVE -->
+		<input type="file" id="fileInput" accept=".json" hidden>		
+		<div id="stats"></div><!-- estatísticas -->
+
+		<button 
+		onclick="exportUser()"class="botao-moderno2" 
+		style="">Salvar</button>
+		<button onclick="importUser()"class="botao-moderno2"
+		style="">Carregar </button>
+        <button id="BtDica" onclick="toggleHint()">Mostrar dica = -1 ponto</button>
+
+		
+<div class="historico-container" style="margin-top:10px; max-height: 166px; overflow-y: auto;">
+    <div style="color: #7b61ff; font-weight: bold; margin-bottom: 5px;">
+		<div id="listaHistorico">Sem registros ainda</div>
+    </div>
+</div>		
+		
+		
+		
+
+		<button onclick="imporResetar() " class="botao-moderno"style=" bottom: 0px; position: absolute;  left: 52%;width: 48%;">Resetar</button>
+		<button onclick="sair()"class="botao-moderno"style="bottom: 0px; position: absolute; left: 7px; width: 48%;">Sair</button>
+
+
+
+	</div>
+
+		
+	<div class="Box" style="display:block;">
+		<div class="BoxImg" style="display:none;" id="boxImg"></div>
+	
+		<!-- PALAVRA -->
+		<div class="BOXPALAVRA">
+		<h2 style="cursor:pointer;" id="word"class="word cold"onclick="ouvirNovamente()" title="Ouvir Novamente"></h2>
+        </div>
+
+	
+		<!-- OPÇÕES -->
+		<div id="options"class="options" style="display:none"></div>
+
+
+	
+	</div>
+	
+
+
+	
+<!--	<div class="Box2" style="display:block;">
+ 		<button class="Btn1" onclick="DicaImg()">Com Dica Img</button>
+	</div>  ----->
+
+</div>
+
+<!-- ================= RECOMPENSA ================= -->
+<div id="rewardBox" style=" display:none;" >
+    <iframe id="rewardVideo" allowfullscreen></iframe>
+    <button onclick="fecharVideo()">Fechar</button>
+</div>
+
+
+<script src="js/scriptQts.js"></script>
+<script src="js/tts.js"></script>
+<script src="js/script.js"></script>
+<script src="js/login.js"></script>
+<script src="js/rewardVideos.js"></script>
+<script src="js/animacoes.js"></script>
+<script src="js/traduzirPara.js"></script>
+<script src="js/flutuacaoRetornoTexto.js"></script>
+</body>
+</html>
